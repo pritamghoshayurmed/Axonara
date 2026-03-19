@@ -1,0 +1,162 @@
+.hero {
+  position: relative;
+  padding-top: 140px;
+  padding-bottom: 0;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fff8f4 0%, #ffffff 60%);
+}
+
+/* Ambient Shape */
+.hero__border-shape {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1600px;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Badge */
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  color: var(--color-body);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 100px;
+  padding: 4px 16px 4px 4px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.hero__badge-pill {
+  background: #FFEBE1;
+  color: #FF6500;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* Title */
+.hero__title {
+  font-size: clamp(2.4rem, 5.5vw, 4.8rem);
+  font-weight: 800;
+  color: var(--color-heading);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.hero__title-orange {
+  color: #FF6500;
+}
+
+/* Subtext */
+.hero__subtext {
+  font-size: clamp(13px, 2vw, 15px);
+  color: var(--color-body);
+  max-width: 540px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+/* Buttons */
+.hero__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -7px; /* Adjusting for hexagon centering */
+  margin-bottom: 70px;
+}
+
+.hero__btn-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  /* Since hero-border-shape.png has the border, we just need padding to place the CTA perfectly */
+  padding: 10px;
+}
+
+/* Dashboard */
+.hero__dashboard-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto -100px auto;
+  padding: 0 24px;
+}
+
+.hero__shape-blob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  max-width: none;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 1;
+}
+
+.hero__dashboard-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 35px;
+  border: 30px solid rgba(255, 255, 255, 0.4);
+  background-clip: padding-box;
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.15),
+    0 10px 30px rgba(255, 101, 0, 0.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 110px;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__btn {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .hero__dashboard-wrapper {
+    margin-bottom: -50px;
+    padding: 0 16px;
+  }
+
+  .hero__dashboard-img {
+    border-width: 10px;
+    border-radius: 16px;
+  }
+
+  .hero__border-shape {
+    display: none;
+  }
+}
