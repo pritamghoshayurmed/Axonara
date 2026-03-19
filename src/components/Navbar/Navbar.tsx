@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
 
         {/* CTA */}
         <div className="navbar__cta">
-          <Button label="Get Started" variant="primary" href="#pricing" size="md" />
+          <Button label="Get Started" variant="primary" href="#contact" size="md" />
         </div>
 
         {/* Hamburger */}
@@ -88,7 +88,7 @@ const Navbar: React.FC = () => {
             {link.label}
           </a>
         ))}
-        <Button label="Get Started" variant="primary" href="#pricing" size="lg" />
+        <Button label="Get Started" variant="primary" href="#contact" size="lg" />
       </div>
     </header>
   );

@@ -7,8 +7,8 @@ import Hero from './components/Hero/Hero';
 import Marquee from './components/Marquee/Marquee';
 import Features from './components/Features/Features';
 import Services from './components/Services/Services';
-import Pricing from './components/Pricing/Pricing';
 import Testimonials from './components/Testimonials/Testimonials';
+import Contact from './components/Contact/Contact';
 import FAQ from './components/FAQ/FAQ';
 import Footer from './components/Footer/Footer';
 
@@ -49,8 +49,8 @@ function App() {
         <Marquee />
         <Features />
         <Services />
-        <Pricing />
         <Testimonials />
+        <Contact />
         <FAQ />
       </main>
       <Footer />
