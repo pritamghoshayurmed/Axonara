@@ -2,7 +2,14 @@ import React, { useEffect, useRef, useState } from 'react';
 import Button from '../Button/Button';
 import './Navbar.css';
 
-const navLinks = [
+type NavLink = {
+  label: string;
+  href: string;
+  active?: boolean;
+  dropdown?: boolean;
+};
+
+const navLinks: NavLink[] = [
   { label: 'Home', href: '#home', active: true },
   { label: 'Features', href: '#features' },
   { label: 'Services', href: '#about' },
