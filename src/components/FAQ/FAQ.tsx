@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import './FAQ.css';
+import Button from '../Button/Button';
 
 const faqs = [
   {
@@ -81,10 +82,7 @@ const FAQ: React.FC = () => {
             <p className="section-subtitle">
               In this section, we address common queries about Axonara's service capabilities, integration options, and support to help you understand our approach.
             </p>
-            <button className="faq__contact-btn" onClick={() => window.location.href = '#contact'}>
-              Contact Us
-              <span className="faq__btn-icon" aria-hidden="true">→</span>
-            </button>
+            <Button label="Contact Us" variant="primary" href="#contact" size="md" />
           </div>
 
           {/* Right */}
@@ -107,23 +105,12 @@ const FAQ: React.FC = () => {
       <div className="cta-banner" id="contact">
         <div className="cta-banner__bg" aria-hidden="true" />
         <div className="container cta-banner__inner">
-          <h2 className="cta-banner__title">Ready to Boost Your Sales?</h2>
+          <span className="cta-banner__badge">✺ CTA</span>
+          <h2 className="cta-banner__title">Ready to Boost Your <span className="cta-banner__title-highlight">Business?</span></h2>
           <p className="cta-banner__subtitle">
-            Launch your next service system with Axonara. We design and deliver measurable digital outcomes.
+            Empower your team with advanced tools to streamline workflows, nurture customer relationships, and drive sustainable business growth more efficiently today.
           </p>
-          <div className="cta-banner__form">
-            <input
-              type="email"
-              className="cta-banner__input"
-              placeholder="Enter your work email"
-              aria-label="Email address"
-            />
-            <button className="cta-banner__btn">
-              Request Proposal
-              <span className="cta-banner__btn-arrow">→</span>
-            </button>
-          </div>
-          <p className="cta-banner__note">Response in 24 business hours | Strategy call included | Clear delivery roadmap</p>
+          <Button label="Contact Us" variant="primary" href="#contact" size="lg" />
         </div>
       </div>
     </section>
