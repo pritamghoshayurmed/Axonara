@@ -3,24 +3,24 @@ import './FAQ.css';
 
 const faqs = [
   {
-    question: 'How long is the free trial?',
-    answer: 'Your free trial lasts 14 days with full access to all Pro features. No credit card required to get started.',
+    question: 'What is Axonara?',
+    answer: 'Axonara is a digital solutions company that designs and delivers custom AI automation systems, analytics platforms, ecommerce experiences, and full-stack applications for ambitious teams.',
   },
   {
-    question: 'Can I import my existing data?',
-    answer: 'Yes! Zyforia supports CSV imports and direct integrations with popular CRMs like HubSpot and Salesforce. Our migration wizard makes it seamless.',
+    question: 'Can I integrate Axonara solutions with my existing tools?',
+    answer: 'Absolutely. We start with a comprehensive audit of your existing tech stack and integrate seamlessly with your current platforms, APIs, and data sources.',
   },
   {
-    question: 'Is my data secure?',
-    answer: 'Absolutely. We are SOC 2 Type II certified, use end-to-end encryption, and are fully GDPR compliant. Your data is yours, always.',
+    question: 'Is Axonara suitable for small teams?',
+    answer: 'Yes! Our services are designed for teams of any size. We offer flexible engagement models, from focused single projects to ongoing strategic partnerships.',
   },
   {
-    question: 'How many users can I add?',
-    answer: 'The Basic Plan includes up to 5 users. The Pro Plan comes with unlimited team members at no additional per-seat cost.',
+    question: 'Do you offer real-time collaboration and support?',
+    answer: 'Yes. We provide dedicated support channels, regular strategy reviews, and collaborate closely with your team throughout design, build, and launch phases.',
   },
   {
-    question: 'Do you offer custom enterprise pricing?',
-    answer: 'Yes! For teams over 50 members or with custom requirements, contact our sales team for tailored pricing and dedicated support.',
+    question: 'What happens after project launch?',
+    answer: 'We offer post-launch optimization, performance monitoring, and strategic roadmap support to ensure your solution continues to scale with your business.',
   },
 ];
 
@@ -77,13 +77,14 @@ const FAQ: React.FC = () => {
           {/* Left */}
           <div className="faq__left">
             <span className="section-badge">✦ FAQ</span>
-            <h2 className="section-title">Frequently Asked Questions</h2>
+            <h2 className="section-title">Frequently Asked <span className="faq__title-highlight">Questions</span></h2>
             <p className="section-subtitle">
-              Got questions? We've got answers. Can't find what you're looking for? Reach out to our team.
+              In this section, we address common queries about Axonara's service capabilities, integration options, and support to help you understand our approach.
             </p>
-            <a href="mailto:hello@zyforia.com" className="faq__contact-link">
-              Contact Support →
-            </a>
+            <button className="faq__contact-btn" onClick={() => window.location.href = '#contact'}>
+              Contact Us
+              <span className="faq__btn-icon" aria-hidden="true">→</span>
+            </button>
           </div>
 
           {/* Right */}
@@ -108,7 +109,7 @@ const FAQ: React.FC = () => {
         <div className="container cta-banner__inner">
           <h2 className="cta-banner__title">Ready to Boost Your Sales?</h2>
           <p className="cta-banner__subtitle">
-            Join 10,000+ teams already growing with Zyforia. Start free, cancel anytime.
+            Launch your next service system with Axonara. We design and deliver measurable digital outcomes.
           </p>
           <div className="cta-banner__form">
             <input
@@ -118,11 +119,11 @@ const FAQ: React.FC = () => {
               aria-label="Email address"
             />
             <button className="cta-banner__btn">
-              Get Started Free
+              Request Proposal
               <span className="cta-banner__btn-arrow">→</span>
             </button>
           </div>
-          <p className="cta-banner__note">No credit card required · 14-day free trial · Cancel anytime</p>
+          <p className="cta-banner__note">Response in 24 business hours | Strategy call included | Clear delivery roadmap</p>
         </div>
       </div>
     </section>

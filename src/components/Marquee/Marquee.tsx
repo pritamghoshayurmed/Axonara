@@ -1,35 +1,48 @@
 import React from 'react';
 import './Marquee.css';
 
-const brands = [
-  { name: 'Logoipsum 1', symbol: '◆' },
-  { name: 'Logoipsum 2', symbol: '●' },
-  { name: 'Logoipsum 3', symbol: '▲' },
-  { name: 'Logoipsum 4', symbol: '■' },
-  { name: 'Logoipsum 5', symbol: '◇' },
-  { name: 'Logoipsum 6', symbol: '○' },
-  { name: 'Logoipsum 7', symbol: '△' },
-  { name: 'Logoipsum 8', symbol: '□' },
+const serviceItems = [
+  'AI Automation & Integration',
+  'Custom Web & App Development',
+  'Business Systems',
+  'Internal Tools',
+  'Sales Funnels',
+  'Analytics Dashboards',
+  'Ecommerce Experiences',
+  'Full Stack Product Engineering',
 ];
 
-const BrandItem: React.FC<{ name: string; symbol: string }> = ({ name, symbol }) => (
+const trustItems = [
+  '50+ Happy Clients',
+  '98% Client Satisfaction',
+  '24/7 Dedicated Support',
+  '5+ Years of Experience',
+  '100+ Solutions Delivered',
+  'Rapid Delivery Cycles',
+];
+
+const RibbonItem: React.FC<{ text: string }> = ({ text }) => (
   <div className="marquee__item">
-    <span className="marquee__item-icon">{symbol}</span>
-    <span className="marquee__item-name">{name}</span>
+    <span className="marquee__item-icon">✦</span>
+    <span className="marquee__item-name">{text}</span>
   </div>
 );
 
 const Marquee: React.FC = () => {
   return (
-    <section className="marquee-section" aria-label="Trusted brands">
-      <div className="marquee-section__header">
-        <p className="marquee-section__label">Trusted by 10,000+ teams worldwide</p>
+    <section className="marquee-section" aria-label="Service highlights">
+      <div className="marquee-track-outer marquee-track-outer--top">
+        <div className="marquee-track marquee-track--services">
+          {[...serviceItems, ...serviceItems].map((item, i) => (
+            <RibbonItem key={`service-${i}`} text={item} />
+          ))}
+        </div>
       </div>
-      <div className="marquee-track-outer">
-        <div className="marquee-track">
-          {/* Duplicate for seamless loop */}
-          {[...brands, ...brands].map((brand, i) => (
-            <BrandItem key={i} name={brand.name} symbol={brand.symbol} />
+
+      <div className="marquee-track-outer marquee-track-outer--bottom">
+        <div className="marquee-track marquee-track--trust">
+          {[...trustItems, ...trustItems].map((item, i) => (
+            <RibbonItem key={`trust-${i}`} text={item} />
           ))}
         </div>
       </div>
