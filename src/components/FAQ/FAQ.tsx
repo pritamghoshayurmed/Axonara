@@ -82,7 +82,7 @@ const FAQ: React.FC = () => {
             <p className="section-subtitle">
               In this section, we address common queries about Axonara's service capabilities, integration options, and support to help you understand our approach.
             </p>
-            <Button label="Contact Us" variant="primary" href="#contact" size="md" />
+            <Button label="Contact Us" variant="primary" href="/contact" size="md" />
           </div>
 
           {/* Right */}
@@ -110,7 +110,7 @@ const FAQ: React.FC = () => {
           <p className="cta-banner__subtitle">
             Empower your team with advanced tools to streamline workflows, nurture customer relationships, and drive sustainable business growth more efficiently today.
           </p>
-          <Button label="Contact Us" variant="primary" href="#contact" size="lg" />
+          <Button label="Contact Us" variant="primary" href="/contact" size="lg" />
         </div>
       </div>
     </section>

@@ -124,7 +124,7 @@ const Pricing: React.FC = () => {
                   label="Get Started"
                   variant={plan.highlighted ? 'primary' : 'dark'}
                   size="lg"
-                  href="#contact"
+                  href="/contact"
                 />
               </div>
             </div>

@@ -10,10 +10,10 @@ type NavLink = {
 };
 
 const navLinks: NavLink[] = [
-  { label: 'Home', href: '#home', active: true },
-  { label: 'Features', href: '#features' },
-  { label: 'Testimonials', href: '#testimonials' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/#home', active: true },
+  { label: 'Features', href: '/#features' },
+  { label: 'Testimonials', href: '/#testimonials' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 const Navbar: React.FC = () => {
@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
     >
       <div className="container navbar__inner">
         {/* Logo */}
-        <a href="#home" className="navbar__logo" aria-label="Axonara Home">
+        <a href="/#home" className="navbar__logo" aria-label="Axonara Home">
           <span className="navbar__logo-icon">
             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="14" cy="14" r="14" fill="#FF6500"/>
@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
 
         {/* CTA */}
         <div className="navbar__cta">
-          <Button label="Get Started" variant="primary" href="#contact" size="md" />
+          <Button label="Get Started" variant="primary" href="/contact" size="md" />
         </div>
 
         {/* Hamburger */}
@@ -94,7 +94,7 @@ const Navbar: React.FC = () => {
             {link.label}
           </a>
         ))}
-        <Button label="Get Started" variant="primary" href="#contact" size="lg" />
+        <Button label="Get Started" variant="primary" href="/contact" size="lg" />
       </div>
     </header>
   );
