@@ -2,9 +2,14 @@ import React from 'react';
 import './Footer.css';
 
 const footerLinks = {
-  Company: ['About Us', 'Careers', 'Blog', 'Press', 'Partners'],
-  Product: ['Features', 'Pricing', 'Security', 'Changelog', 'Integrations'],
-  Resources: ['Documentation', 'API Reference', 'Status', 'Community', 'Support'],
+  Product: ['Features', 'Testimonials', 'Process', 'Contact'],
+};
+
+const linkMap: { [key: string]: string } = {
+  Features: '/#features',
+  Testimonials: '/#testimonials',
+  Process: '/#ourApproach',
+  Contact: '/contact',
 };
 
 const socialIcons = [
@@ -46,10 +51,10 @@ const Footer: React.FC = () => {
                 <rect width="28" height="28" rx="8" fill="#FF6500"/>
                 <path d="M7 9h14M7 14h10M7 19h7" stroke="white" strokeWidth="2" strokeLinecap="round"/>
               </svg>
-              <span>Zyforia</span>
+              <span>Axonara</span>
             </div>
             <p className="footer__tagline">
-              The modern CRM built to help your team close more deals, faster. Simple, powerful, and built for scale.
+              Empowering businesses with intelligent solutions. Built for growth, designed for excellence. Transform your vision into reality.
             </p>
             <div className="footer__socials">
               {socialIcons.map((s) => (
@@ -72,7 +77,7 @@ const Footer: React.FC = () => {
               <ul className="footer__col-links">
                 {links.map((link) => (
                   <li key={link}>
-                    <a href="#" className="footer__link">{link}</a>
+                    <a href={linkMap[link]} className="footer__link">{link}</a>
                   </li>
                 ))}
               </ul>
@@ -83,19 +88,19 @@ const Footer: React.FC = () => {
         {/* Bottom bar */}
         <div className="footer__bottom">
           <p className="footer__copyright">
-            © 2026 Zyforia, Inc. All rights reserved.
+            © 2026 Axonara, Inc. All rights reserved.
           </p>
           <div className="footer__bottom-links">
-            <a href="#" className="footer__link">Privacy Policy</a>
-            <a href="#" className="footer__link">Terms of Service</a>
-            <a href="#" className="footer__link">Cookie Settings</a>
+            <a href="/privacy-policy" className="footer__link">Privacy Policy</a>
+            <a href="/terms-of-service" className="footer__link">Terms of Service</a>
+            <a href="/cookie-settings" className="footer__link">Cookie Settings</a>
           </div>
         </div>
       </div>
 
       {/* Big Watermark Typography */}
       <div className="footer__watermark" aria-hidden="true">
-        Zyforia
+        Axonara
       </div>
     </footer>
   );
